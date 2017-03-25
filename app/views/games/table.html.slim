@@ -1,0 +1,13 @@
+h1 Table
+
+table#teams_table.table.table-striped.table-responsive
+
+button.btn.btn-default = link_to 'Back', root_path, method: :get
+button.btn.btn-default = link_to 'View fixtures', games_path
+
+javascript:
+  App.chat = App.cable.subscriptions.create({channel: "TeamChannel"}, {
+    received: function (data) {
+        $("#teams_table").html(data);
+    }
+  });

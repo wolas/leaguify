@@ -1,0 +1,31 @@
+html
+  head
+    meta[charset="UTF-8"]
+    title
+      | League
+  body
+    .container
+      .row
+        .col-sm-12.text-center
+          h1
+            | Welcome to Ventorro del Cano League
+      .row
+        .col-md-4.text-center
+          .thumbnail
+            i.fa.fa-users[aria-hidden="true"]
+            button.btn.btn-default
+              = link_to 'View teams', teams_path
+        .col-md-4.text-center
+          .thumbnail
+            i.fa.fa-table[aria-hidden="true"]
+            button.btn.btn-default
+              = link_to 'View fixtures', games_path
+        .col-md-4.text-center
+          .thumbnail
+            i.fa.fa-line-chart[aria-hidden="true"]
+            button.btn.btn-default
+              = link_to 'View table', table_games_path
+      .row
+        .col-md-12.text-center
+          button.btn.btn-default
+            = link_to 'Generate fixture', fixture_games_path

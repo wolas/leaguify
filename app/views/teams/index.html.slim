@@ -1,0 +1,20 @@
+h1
+  | Teams
+table.table.table-striped
+  tr
+    th
+      | Name
+    th
+      | Stadium
+  - @teams.each do |team|
+    tr
+      td
+        = team.name
+      td
+        = team.stadium
+button
+  = link_to 'New team', new_team_path, method: :get
+br
+br
+button
+  = link_to 'Back', root_path, method: :get

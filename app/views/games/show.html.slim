@@ -1,0 +1,13 @@
+p#notice
+  = notice
+p
+  strong
+    | Local goals:
+  = @game.local_goals
+p
+  strong
+    | Visitor goals:
+  = @game.visitor_goals
+= link_to 'Edit', edit_game_path(@game)
+|  | 
+= link_to 'Back', games_path
