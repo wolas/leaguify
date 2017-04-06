@@ -1,20 +1,22 @@
-h1
-  | Teams
-table.table.table-striped
-  tr
-    th
-      | Name
-    th
-      | Stadium
-  - @teams.each do |team|
+.row.topbar
+  .col-sm-12.text-center 
+    h1
+      | Teams
+.row
+  table.table.table-striped
     tr
-      td
-        = team.name
-      td
-        = team.stadium
-button
-  = link_to 'New team', new_team_path, method: :get
-br
-br
-button
-  = link_to 'Back', root_path, method: :get
+      th
+        | Name
+      th
+        | Stadium
+    - @teams.each do |team|
+      tr
+        td
+          = team.name
+        td
+          = team.stadium
+.row
+  button.btn.btn-default
+    = link_to 'New team', new_team_path, method: :get
+  button.btn.btn-default
+    = link_to 'Back', root_path, method: :get

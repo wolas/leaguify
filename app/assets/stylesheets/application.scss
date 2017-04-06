@@ -41,3 +41,20 @@
     list-style: square;
   }
 }
+
+
+body{
+  margin: 0px;
+}
+
+.topbar {
+  color: white;
+  background-image: url("football_stadium2.jpg");
+  opacity: 0.8;
+  height: 8em;
+
+  h1 {
+    vertical-align: top;
+    margin-top: 3%;
+  }
+}

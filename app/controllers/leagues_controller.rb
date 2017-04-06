@@ -1,6 +1,6 @@
 class LeaguesController < ApplicationController
 
 	def index
-		render 'index'
+		render layout: "containerfluid"
 	end
 end

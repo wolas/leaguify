@@ -1,9 +1,23 @@
 // Place all the styles related to the leagues controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 h1 {
-	color: #36f;
+	margin-bottom: 0em;
+}
+
+.homeheader {
+	color: white;
+}
+
+.quote {
+	color: white;
 	margin-bottom: 1em;
+
+}
+
+.toprow {
+	margin: 13em;
 }
 
 .row {
@@ -17,4 +31,21 @@ button {
 .thumbnail .fa {
 	font-size: 9em;
 	display: block;
+	border: 1em;
+	color: black;
+}
+
+.thumbnail {
+	border: none;
+	background: none;
+	// background: rgba(100,100,100,0.5);
+
+}
+
+.container-fluid {
+	background-image: url("football_stadium2.jpg");
+	background-size: cover;
+	height: 100vh;
+	width: 100%
+
 }

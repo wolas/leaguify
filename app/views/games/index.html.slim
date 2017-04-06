@@ -1,44 +1,50 @@
-h1
-  | Games
-button.btn.btn-default
-  = link_to 'Back', root_path, method: :get
-button.btn.btn-default
-  = link_to 'View table', table_games_path
-- @game_fixture = ""
-table.table.table-striped
-  - @fixtures.each do |fixture, games|
-    thead
+.row
+  .col-sm-12.text-center.topbar
+    h1
+      | Games
+.row.col-sm-12
+  button.btn.btn-default
+    = link_to 'Back', root_path, method: :get
+  button.btn.btn-default
+    = link_to 'View table', table_games_path
+.row.col-sm-12
+  - @game_fixture = ""
+  table.table.table-striped
+    - @fixtures.each do |fixture, games|
+      thead
 
-    td[colspan="4"]
-      h2
-        | Fixture 
-        = fixture
-    thead
+      td[colspan="4"]
+        h2
+          | Fixture 
+          = fixture
+      thead
 
-    th
-      | Teams
-    th
-      | Result
-    th
-      | Date
-    th
-      | Options
-    tbody
-      - games.each do |game|
-        tr
-          td
-            = game.local_team.name
-            |  vs 
-            = game.visitor_team.name
-          td
-            | Local: 
-            = best_in_place game, :local_goals
-            |  vs 
-            = best_in_place game, :visitor_goals
-            |  :Visitor
-          td
-            = game.game_date_time
-          td
-            = link_to('Edit', edit_game_path(game), method: :get)
-button
-  = link_to 'Back', root_path, method: :get
+      th
+        | Teams
+      th
+        | Result
+      th
+        | Date
+      th
+        | Options
+      tbody
+        - games.each do |game|
+          tr
+            td
+              = game.local_team.name
+              |  vs 
+              = game.visitor_team.name
+            td
+              | Local: 
+              = best_in_place game, :local_goals
+              |  vs 
+              = best_in_place game, :visitor_goals
+              |  :Visitor
+            td
+              = game.game_date_time
+            td
+              = link_to('Edit', edit_game_path(game), method: :get)
+
+.row.col-sm-12
+  button.btn.btn-default
+    = link_to 'Back', root_path, method: :get
